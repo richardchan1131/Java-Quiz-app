@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SegmentedProgressBar">
+        <attr name="dividerColor" format="color" />
+        <attr name="progressBarBackgroundColor" format="color" />
+        <attr name="progressBarColor" format="color" />
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="isDividerEnabled" format="boolean" />
+        <attr name="divisions" format="integer" />
+        <attr name="cornerRadius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ArcDrawer">
+        <attr name="arc_width" format="dimension"/>
+        <attr name="arc_cropDirection" format="enum">
+            <enum name="cropInside" value="0"/>
+            <enum name="cropOutside" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="LuckyWheelView">
+        <attr name="lkwBackgroundColor" format="color" />
+        <attr name="lkwCursor" format="reference" />
+        <attr name="lkwCenterImage" format="reference" />
+        <attr name="lkwEdgeColor" format="color" />
+        <attr name="lkwEdgeWidth" format="integer" />
+        <attr name="lkwTopTextColor" format="color" />
+        <attr name="lkwTopTextPadding" format="dimension" />
+        <attr name="lkwTopTextSize" format="dimension" />
+        <attr name="lkwSecondaryTextSize" format="dimension" />
+    </declare-styleable>
+</resources>
+

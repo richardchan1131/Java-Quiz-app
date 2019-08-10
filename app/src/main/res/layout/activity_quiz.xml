@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkBackground"
+    tools:context=".Quiz">
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/quit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:background="@color/darkBackground"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                            android:id="@+id/circularProgressBar"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            app:cpb_background_progressbar_color="#b6bbd8"
+                            app:cpb_background_progressbar_width="5dp"
+                            app:cpb_progress_direction="to_right"
+                            app:cpb_progressbar_color="#3f51b5"
+                            app:cpb_progressbar_width="10dp"
+                            app:cpb_round_border="false"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/timer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:drawablePadding="5dp"
+                            android:fontFamily="@font/carter_one"
+                            android:text="29"
+                            android:textColor="#FFFFFF"
+                            android:textSize="25sp"
+                            app:drawableTint="#FFFFFF"
+                            app:layout_constraintBottom_toBottomOf="@+id/circularProgressBar"
+                            app:layout_constraintEnd_toEndOf="@+id/circularProgressBar"
+                            app:layout_constraintStart_toStartOf="@+id/circularProgressBar"
+                            app:layout_constraintTop_toTopOf="@+id/circularProgressBar" />
+
+                        <TextView
+                            android:id="@+id/categoryName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:fontFamily="@font/aladin"
+                            android:text="Maths Quiz"
+                            android:textColor="@color/txtbox_bor"
+                            android:textSize="25sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/circularProgressBar"
+                            app:layout_constraintEnd_toStartOf="@+id/circularProgressBar"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/circularProgressBar" />
+
+                        <TextView
+                            android:id="@+id/textView19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="13dp"
+                            android:fontFamily="@font/carter_one"
+                            android:text="Question"
+                            android:textColor="#E1DBDB"
+                            android:textSize="35sp"
+                            app:layout_constraintBottom_toTopOf="@+id/segmented_pb_1"
+                            app:layout_constraintStart_toStartOf="@+id/categoryName"
+                            app:layout_constraintTop_toBottomOf="@+id/circularProgressBar" />
+
+                        <TextView
+                            android:id="@+id/currentNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="13dp"
+                            android:fontFamily="@font/carter_one"
+                            android:text="10"
+                            android:textColor="@color/greenblue"
+                            android:textSize="45sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView19"
+                            app:layout_constraintStart_toEndOf="@+id/textView19"
+                            app:layout_constraintTop_toTopOf="@+id/textView19" />
+
+                        <TextView
+                            android:id="@+id/quixcounter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/carter_one"
+                            android:text="/10"
+                            android:textColor="@color/txtbox_bor"
+                            android:textSize="35sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/currentNo"
+                            app:layout_constraintStart_toEndOf="@+id/currentNo"
+                            app:layout_constraintTop_toTopOf="@+id/currentNo" />
+
+
+                        <com.rishav.quizearn.SegmentedProgressBar
+                            android:id="@+id/segmented_pb_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="3dp"
+                            android:layout_centerInParent="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            app:cornerRadius="20dp"
+                            app:dividerColor="@color/darkBackground"
+                            app:dividerWidth="2dp"
+                            app:divisions="10"
+                            app:isDividerEnabled="true"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:progressBarBackgroundColor="@color/opt_text"
+                            app:progressBarColor="@color/bluishgreen"
+                             />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/question"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/carter_one"
+                    android:gravity="start"
+                    android:text=""
+                    android:textColor="@color/text_white"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/questionNo"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+
+                <TextView
+                    android:id="@+id/questionNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/carter_one"
+                    android:gravity="start"
+                    android:text="Q1."
+                    android:textColor="@color/text_white"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/question" />
+
+                <TextView
+                    android:id="@+id/option1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/quiz_text_box"
+                    android:onClick="onClick"
+                    android:padding="17dp"
+                    android:text="Alright"
+                    android:textColor="@color/opt_text"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/question" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/option1correct"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/option1"
+                    app:layout_constraintEnd_toEndOf="@+id/option1"
+                    app:layout_constraintTop_toTopOf="@+id/option1"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/correct"/>
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/option1wrong"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/option1"
+                    app:layout_constraintEnd_toEndOf="@+id/option1"
+                    app:layout_constraintTop_toTopOf="@+id/option1"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/wrong"/>
+
+                <TextView
+                    android:id="@+id/option2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/quiz_text_box"
+                    android:onClick="onClick"
+                    android:padding="17dp"
+                    android:text="ok"
+                    android:textColor="@color/opt_text"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toEndOf="@+id/option1"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/option1"
+                    app:layout_constraintTop_toBottomOf="@+id/option1" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/option2correct"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/option2"
+                    app:layout_constraintEnd_toEndOf="@+id/option2"
+                    app:layout_constraintTop_toTopOf="@+id/option2"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/correct"
+                    tools:ignore="DuplicateIds" />
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/option2wrong"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/option2"
+                    app:layout_constraintEnd_toEndOf="@+id/option2"
+                    app:layout_constraintTop_toTopOf="@+id/option2"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/wrong"/>
+
+                <TextView
+                    android:id="@+id/option3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/quiz_text_box"
+                    android:onClick="onClick"
+                    android:padding="17dp"
+                    android:text="yooooo"
+                    android:textColor="@color/opt_text"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toEndOf="@+id/option2"
+                    app:layout_constraintStart_toStartOf="@+id/option2"
+                    app:layout_constraintTop_toBottomOf="@+id/option2" />
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/option3correct"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/option3"
+                    app:layout_constraintEnd_toEndOf="@+id/option3"
+                    app:layout_constraintTop_toTopOf="@+id/option3"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/correct"/>
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/option3wrong"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/option3"
+                    app:layout_constraintEnd_toEndOf="@+id/option3"
+                    app:layout_constraintTop_toTopOf="@+id/option3"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/wrong"/>
+
+                <TextView
+                    android:id="@+id/option4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/quiz_text_box"
+                    android:onClick="onClick"
+                    android:padding="17dp"
+                    android:text="yuli"
+                    android:textColor="@color/opt_text"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toEndOf="@+id/option3"
+                    app:layout_constraintStart_toStartOf="@+id/option3"
+                    app:layout_constraintTop_toBottomOf="@+id/option3" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/option4correct"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/option4"
+                    app:layout_constraintEnd_toEndOf="@+id/option4"
+                    app:layout_constraintTop_toTopOf="@+id/option4"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/correct"/>
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/option4wrong"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/option4"
+                    app:layout_constraintEnd_toEndOf="@+id/option4"
+                    app:layout_constraintTop_toTopOf="@+id/option4"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/wrong"/>
+
+                <com.google.android.gms.ads.AdView
+                    android:id="@+id/adView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:adSize="BANNER"
+                    app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/option4">
+
+                </com.google.android.gms.ads.AdView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/quit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/darkBackground"
+        android:drawableLeft="@drawable/ic_baseline_power_settings_new_24"
+        android:drawableTint="@color/opt_text"
+        android:onClick="onClick"
+        android:padding="13dp"
+        android:text="Exit Quiz"
+        android:textColor="@color/opt_text"
+        android:textSize="20sp"
+        app:fontFamily="@font/carter_one"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/next"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btndesign"
+        android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
+        android:drawableTint="#FFFFFF"
+        android:onClick="onClick"
+        android:padding="13dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Next"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:fontFamily="@font/carter_one"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/quit" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

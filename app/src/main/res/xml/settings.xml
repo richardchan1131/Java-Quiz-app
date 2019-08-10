@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Music">
+        <SwitchPreference
+            android:id="@+id/music"
+            android:defaultValue="true"
+            android:key="switch_musicPreference"
+            android:title="Background Music"
+            android:summary="Put music On or Off"/>
+    </PreferenceCategory>
+    <RingtonePreference
+        android:defaultValue="true"
+        android:key="ringtone_preference_1"
+        android:title="Ringtone preference" />
+    <EditTextPreference
+        android:defaultValue="Default value"
+        android:key="edit_text_preference_1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Edit text preference" />
+</PreferenceScreen>

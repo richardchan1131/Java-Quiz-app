@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "825938878974",
+    "project_id": "quiz-earn-b5b83",
+    "storage_bucket": "quiz-earn-b5b83.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:825938878974:android:c9fd00ba003cb8e904a0af",
+        "android_client_info": {
+          "package_name": "com.rishav.quizearn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "825938878974-gbcojlt8k9aqfmtuqdcir6p64ks7hecv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1QjiNepkwUWv5sPExQHTGx6XMf90QXkc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "825938878974-gbcojlt8k9aqfmtuqdcir6p64ks7hecv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
