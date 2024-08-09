@@ -43,7 +43,7 @@ The Quiz Earn Android Project offers the following features:
 - Profile management: Users can update their profile information, view their earned rewards, and track their progress.
 
 ## Installation
-1. Clone the repository: `git clone https://github.com/rishavchanda/Quiz-Earn.git`
+1. Clone the repository: `git clone https://github.com/Richardchan1131/Java-Quiz-app.git`
 2. Open the project in Android Studio.
 3. Build and run the project on an Android device or emulator.
 
